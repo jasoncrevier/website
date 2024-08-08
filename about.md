@@ -1,18 +1,19 @@
 ---
-title: Colophon
+title: About me
 permalink: /about/
-layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
-comments: false
+layout: about
 ---
 
-He's a student from Banyuwangi, living in Jogjakarta. the blog for documentation about his programming 🎒 journey, running on jekyll, hosting on [now.sh](http://now.sh) and using his own theme, he name it <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">klisé</a>, he also loves to learning web technology; but he often forgot, that a reason why him doing the writing.
+# Nice to meet you
+I'm Jason, a communications specialist with a passion for technology. I've worked in the telecom industry for over 5 years and I'm known for my expertise in internal communication strategies. In my spare time, I enjoy gaming, music, and tinkering with computers to keep my skills sharp.
 
-If you have a question about him or else, just send a letter to him.
+# Where to find me
+- [GitHub](https://github.com/jasoncrevier)
+- [Mastodon](https://universeodon.com/@null)
+- [Pixelfed](https://pixelfed.social/nullspace)
 
-You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
+# Let's get down to business
 
-**may u needs ✨**
+[Check out my resume](https://rxresu.me/jasoncrevier/general)
 
-- {{ site.author.email }}
-- github.com/{{ site.author.github }}
+Want to work together? Send me an email: [jason@jasoncrevier.com](mailto:jason@jasoncrevier.com)

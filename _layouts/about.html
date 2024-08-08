@@ -6,6 +6,7 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 
 {% include header.html %}
+
 <body data-theme="{{ site.mode }}" class="notransition">
 
   <script>
@@ -29,18 +30,18 @@ layout: compress
 
   {% include navbar.html %}
   <div class="wrapper">
-    <main aria-label="Content">
-      <div class="not-found">
-        <div class="container">
-          <div class="title">404</div>
-          <p class="phrase">😕 Hmm... looks like we couldn't find a page here</p>
-          <a class="solution" href="{{ site.url }}">Back home</a>
-        </div>
-      </div>
-    </main>  
+    <header class="header">
+      <h1 class="header-title center" itemprop="headline">{{ page.title | escape }}.</h1>
+    </header>
+      <img
+        src="{{ site.author.avatar }}"
+        style="display:block;margin-left:auto;margin-right:auto;width:50%;width:150px;height:150px;border-radius:100%;user-select:none;background-color:$black;-ms-user-select:none;-webkit-user-select:none;-webkit-animation:0.5s ease-in forwards fadein;animation:0.5s ease-in forwards fadein;opacity:1;"
+      />
+    <main class="page-content" aria-label="Content">
+      {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=4 h_max=4 %}
+    </main>
     {% include footer.html %}
   </div>
-    
 </body>
 
 </html>

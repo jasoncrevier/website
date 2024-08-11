@@ -19,7 +19,7 @@ jobs:
         sudo gem install jekyll bundler
         sudo bundle install
         sudo bundle exec jekyll build
-        echo "${{ secrets.DOCKERPW }}" | docker login -u "${{ secrets.DOCKERUSER }}" --password-stdin
+        echo "${{ secrets.DOCKERPW }}" | docker login --username="${{ secrets.DOCKERUSER }}" --password-stdin
         docker build -t jasoncrevier_website:latest .
         docker tag jasoncrevier_website jasonjcrevier/jasoncrevier_website
         docker push jasonjcrevier/jasoncrevier_website

@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: |
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "jasonjcrevier"
+        docker build -t jasoncrevier_website:latest .
+        docker tag jasoncrevier_website jasonjcrevier/jasoncrevier_website
+        docker push jasonjcrevier/jasoncrevier_website

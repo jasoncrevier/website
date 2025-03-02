@@ -22,7 +22,7 @@ code {
 
 // Codeblock Theme
 pre.highlight, pre {
-  margin: 0 -17px;
+  margin: 0 -27px;
   @include media-query($on-mobile) {
     margin: 0 calc(51% - 51vw);
     padding-left: 20px;
@@ -30,9 +30,10 @@ pre.highlight, pre {
   border: 1px solid rgba(128,128,128,0.1);
   background-color: #1a1b21;
   border-radius: 2px;
-  padding: 10px;
+  padding: 20px;
   display: block;
   overflow-x: auto;
+  word-break: break-all;
 
   > code {
     width: 100%;
@@ -42,7 +43,6 @@ pre.highlight, pre {
     line-height: 1.5;
     display: block;
     border: 0;
-    overflow-wrap: break-word;
   }
 }
 

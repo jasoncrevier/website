@@ -22,6 +22,7 @@ With this set up, I have a drive that:
 - can be accessed remotely,
 - decrypts itself on boot,
 - and can be accessed over Tailscale.
+
 # Create the encrypted drive
 In order to keep the content on the disk secure, the first thing you need is an HDD encrypted with LUKS. My favorite way to do that is to use the Gnome `disks` application to format the drive.
 
@@ -30,7 +31,8 @@ I used these settings for my drive:
 - Type: Internal disk for use with Linux systems only (Ext4)
 	- Password protect volume (LUKS)
 
-![[Pasted image 20250212193711.png]]
+![gnome-disks-encrypt][{{site.url}}/assets/img/gnome-disks-encrypt.png]
+
 # Install `cryptsetup`
 On an Orange Pi Zero 3 running Armbian (based on Debian 12 at the time of writing), you can install `cryptsetup` with this command:
 
@@ -50,9 +52,9 @@ To create a keyfile, you can use `dd` to generate a random file. This file will 
 sudo dd if=/dev/random of=/root/my_keyfile bs=1024 count=4 sudo chmod 0400 /root/my_keyfile
 ```
 
-•`/dev/random` is used to generate random data. 
-• The `bs=1024 count=4` parameters define the size of the keyfile (in this case, 4 KB). 
-• The `chmod 0400` command ensures that only root can read the keyfile, making it more secure. 
+- `/dev/random` is used to generate random data. 
+- The `bs=1024 count=4` parameters define the size of the keyfile (in this case, 4 KB). 
+- The `chmod 0400` command ensures that only root can read the keyfile, making it more secure. 
 
 ## 2. Add the keyfile to the LUKS partition
 Next, you need to add the keyfile to the LUKS partition. Run the following command to add the keyfile to the LUKS header:

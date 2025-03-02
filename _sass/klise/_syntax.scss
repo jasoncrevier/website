@@ -6,8 +6,8 @@ code {
   font-variant-ligatures: normal;
   white-space: pre;
   word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
+  word-break: break-word;
+  word-wrap: break-word;
   font-size: inherit;
 
   &.highlighter-rouge {
@@ -30,10 +30,9 @@ pre.highlight, pre {
   border: 1px solid rgba(128,128,128,0.1);
   background-color: #1a1b21;
   border-radius: 2px;
-  padding: 20px;
+  padding: 10px;
   display: block;
   overflow-x: auto;
-  word-break: break-all;
 
   > code {
     width: 100%;

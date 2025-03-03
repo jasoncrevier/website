@@ -31,7 +31,7 @@ I used these settings for my drive:
 - Type: Internal disk for use with Linux systems only (Ext4)
 	- Password protect volume (LUKS)
 
-![gnome-disks-encrypt][{{site.url}}/assets/img/gnome-disks-encrypt.png]
+![gnome-disks-encrypt]({{site.url}}/assets/img/gnome-disks-encrypt.png)
 
 # Install `cryptsetup`
 On an Orange Pi Zero 3 running Armbian (based on Debian 12 at the time of writing), you can install `cryptsetup` with this command:

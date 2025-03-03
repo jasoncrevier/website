@@ -4,10 +4,10 @@ code {
   text-rendering: optimizeLegibility;
   font-feature-settings: "calt" 1;
   font-variant-ligatures: normal;
-  white-space: pre;
+  white-space: normal;
   word-spacing: normal;
-  word-break: break-word;
-  word-wrap: break-word;
+  word-break: break-all;
+  word-wrap: break-all;
   font-size: inherit;
 
   &.highlighter-rouge {

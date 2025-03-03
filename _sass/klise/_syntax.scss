@@ -22,13 +22,13 @@ code {
 
 // Codeblock Theme
 pre.highlight, pre {
-  margin: 0 27px;
+  margin: 0 30px;
   @include media-query($on-mobile) {
     margin: 0 calc(51% - 51vw);
     padding-left: 20px;
   }
   border: 1px solid rgba(128,128,128,0.1);
-  background-color: #1a1b21;
+  background-color: #1E1E2E;
   border-radius: 2px;
   padding: 10px;
   display: block;
@@ -55,13 +55,13 @@ pre.highlight, pre {
 
 .highlight,
 .highlight .w {
-  color: #fbf1c7;
-  // background-color: #1a1b21;
+  color: #cdd6fa;
+  // background-color: #1E1E2E;
 }
 
 .highlight .err {
   color: #fb4934;
-  // background-color: #1a1b21;
+  // background-color: #1E1E2E;
   font-weight: bold;
 }
 
@@ -84,22 +84,22 @@ pre.highlight, pre {
 
 .highlight .o,
 .highlight .ow {
-  color: #fbf1c7;
+  color: #cdd6fa;
 }
 
 .highlight .p,
 .highlight .pi {
-  color: #fbf1c7;
+  color: #cdd6fa;
 }
 
 .highlight .gi {
   color: #b8bb26;
-  background-color: #282828;
+  background-color: #181825;
 }
 
 .highlight .gd {
   color: #fb4934;
-  background-color: #282828;
+  background-color: #181825;
 }
 
 .highlight .gh {

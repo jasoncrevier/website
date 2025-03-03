@@ -6,22 +6,23 @@ date: 2025-03-02
 modified: 
 categories: 
 tags:
-  - orangepi
+  - pi
+  - encryption
   - LUKS
-  - Gnome
   - backup
+  - gnome
   - armbian
   - debian
   - tailscale
 ---
 # Why I built this
-I've been keeping a portable HDD at someone else's house as an off-site, emergency backup. I had an Orange Pi Zero 3 handy and wanted to see if I could rig something up to access the drive remotely.
+I've been keeping a portable hard drive (HDD) at someone else's house as an off-site, emergency backup. I had an [Orange Pi Zero 3](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-Zero-3.html) handy and wanted to see if I could rig something up to access the drive remotely.
 
 With this set up, I have a drive that:
 - lives off-site,
 - can be accessed remotely,
 - decrypts itself on boot,
-- and can be accessed over Tailscale.
+- and can be accessed over [Tailscale](https://tailscale.com/).
 
 # Create the encrypted drive
 In order to keep the content on the disk secure, the first thing you need is an HDD encrypted with LUKS. My favorite way to do that is to use the Gnome `disks` application to format the drive.
@@ -34,7 +35,7 @@ I used these settings for my drive:
 ![gnome-disks-encrypt]({{site.url}}/assets/img/gnome-disks-encrypt.png)
 
 # Install `cryptsetup`
-On an Orange Pi Zero 3 running Armbian (based on Debian 12 at the time of writing), you can install `cryptsetup` with this command:
+On an [Orange Pi Zero 3](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-Zero-3.html) running [armbian](https://www.armbian.com) (based on [debian](https://www.debian.org/) 12 at the time of writing), you can install `cryptsetup` with this command:
 
 ```bash
 sudo apt install cryptsetup
@@ -42,7 +43,7 @@ sudo apt install cryptsetup
 
 `cryptsetup` is a command-line utility for managing disk encryption.
 # Create and use a keyfile
-In order to unlock the drive without entering the passphrase whenever the Pi reboots, you can create a keyfile to unlock the encrypted partition. 
+In order to unlock the drive without entering the passphrase whenever the computer reboots, you can create a keyfile to unlock the encrypted partition. 
 
 **Here's how to do that:**
 ## 1. Create a keyfile
@@ -51,6 +52,7 @@ To create a keyfile, you can use `dd` to generate a random file. This file will 
 ```bash
 sudo dd if=/dev/random of=/root/my_keyfile bs=1024 count=4 sudo chmod 0400 /root/my_keyfile
 ```
+
 
 - `/dev/random` is used to generate random data. 
 - The `bs=1024 count=4` parameters define the size of the keyfile (in this case, 4 KB). 

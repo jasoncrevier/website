@@ -4,7 +4,7 @@ title: Building an encrypted remote backup
 description: Instructions for building a LUKS encrypted, off-site backup target
 date: 2025-03-02
 modified: 
-categories: 
+categories: homelab
 tags:
   - pi
   - encryption

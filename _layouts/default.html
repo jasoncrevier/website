@@ -27,7 +27,11 @@ layout: compress
   </script>
 
   {% include navbar.html %}
+
   <div class="wrapper">
+    <div class="now-playing-container">
+      {% include now_playing.html %}
+    </div>
     {% include author.html %}
     <main aria-label="Content">
       {{ content }}

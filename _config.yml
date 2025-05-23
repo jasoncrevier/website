@@ -87,3 +87,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-postfiles
+
+# Now playing widget
+listenbrainz_username: jasoncrevier

@@ -367,3 +367,20 @@ mark,
     }
   }
 }
+
+.now-playing-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em; /* ensures space from fixed nav */
+}
+
+
+#now-playing {
+  max-width: 400px;
+  width: 100%;
+  text-align: right;
+  word-wrap: break-word;
+  white-space: normal;
+  font: $normal-weight #{$base-font-size}/#{$base-line-height} $sans-family;
+  font-size: $small-font-size;
+}

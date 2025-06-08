@@ -3,7 +3,7 @@ layout: post
 title: Building an encrypted remote backup
 description: Instructions for building a LUKS encrypted, off-site backup target
 date: 2025-03-02
-modified: 
+modified: 2025-06-08
 categories: homelab
 tags:
   - pi
@@ -23,6 +23,10 @@ With this set up, I have a drive that:
 - can be accessed remotely,
 - decrypts itself on boot,
 - and can be accessed over [Tailscale](https://tailscale.com/).
+
+**Important note:** as a friend pointed out, this is really a "key hidden under the mat" kind of security. The goal is really just to make it so someone can't just unplug the drive, plug it into another computer, and see everything on it.
+
+If you want to make sure your files are completely protected against prying eyes, make sure to encrypt them before putting them on the drive.
 
 # Create the encrypted drive
 In order to keep the content on the disk secure, the first thing you need is an HDD encrypted with LUKS. My favorite way to do that is to use the Gnome `disks` application to format the drive.

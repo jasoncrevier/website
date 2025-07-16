@@ -384,3 +384,18 @@ mark,
   font: $normal-weight #{$base-font-size}/#{$base-line-height} $sans-family;
   font-size: $small-font-size;
 }
+
+#mastodon_timeline {
+  margin-top: 0rem;
+}
+
+#mastodon_timeline ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#mastodon_timeline li {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}

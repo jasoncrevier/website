@@ -217,10 +217,20 @@
 
 // Content
 .posts-item-note {
-  font-size: $base-font-size;
+  font-size: $base-font-size * 1.25;
   font-weight: 700;
   margin-bottom: 5px;
   color: $black;
+}
+
+.mastodon-item {
+  padding-top: 5px;
+  padding-bottom: 6px;
+  @extend %clearfix;
+
+  &:not(:first-child) {
+    border-top: 1px solid $light;
+  }
 }
 
 // List of posts

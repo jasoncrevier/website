@@ -35,8 +35,13 @@ layout: compress
     {% include author.html %}
     <main aria-label="Content">
       {{ content }}
+      <p>&nbsp;</p>
+      {% include mastodon.html %}
     </main>
     {% include footer.html %}
   </div>
+
+  <script src="{{ '/assets/js/mastodon.js' | relative_url }}"></script>
+
 </body>
 </html>

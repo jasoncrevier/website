@@ -152,7 +152,12 @@ body[data-theme="dark"] {
       }
     }
   }
-
+  // Mastodon Item
+  .mastodon-item {
+    &:not(:first-child) {
+      border-color: $dark-light;
+    }
+  }
   // Post Item
   .post-item {
     &:not(:first-child) {

@@ -39,7 +39,7 @@ const MastodonBar = {
 
       html += `
         <article class="mastodon-item">
-        <p style="font-size: 12px;">${dateStr}</p>
+        <a style="font-size: 12px;" href="${item.querySelector("link").innerHTML}" target="_blank" rel="noopener">${dateStr}</a>
           <h4><a href="${item.querySelector("link").innerHTML}" target="_blank" rel="noopener">
             <img alt="profile avatar" class="author-avatar" style="width:30px;height:30px;border-radius:100%;" src="${MastodonBar.config.profileImg}"></a>
 

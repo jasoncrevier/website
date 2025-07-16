@@ -39,13 +39,14 @@ const MastodonBar = {
 
       html += `
         <article class="mastodon-item">
+        <p style="font-size: 12px;">${dateStr}</p>
           <h4><a href="${item.querySelector("link").innerHTML}" target="_blank" rel="noopener">
             <img alt="profile avatar" class="author-avatar" style="width:30px;height:30px;border-radius:100%;" src="${MastodonBar.config.profileImg}"></a>
 
             <a href="${item.querySelector("link").innerHTML}" target="_blank" rel="noopener">
-              @${MastodonBar.config.userName}
-              ${dateStr}
+              @${MastodonBar.config.userName}@${MastodonBar.config.instanceName}
             </a></h4>
+            
           ${mediaHtml}
           <p>
             ${MastodonBar.decodeHTML(item.querySelector("description").innerHTML)}

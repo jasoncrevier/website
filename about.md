@@ -9,7 +9,7 @@ I'm Jason, a communications specialist with a passion for technology. I've worke
 
 # Where to find me
 - [GitHub](https://github.com/jasoncrevier)
-- [Mastodon](https://universeodon.com/@null)
+- [Mastodon](https://mastodon.social/@jasoncrevier)
 - [Pixelfed](https://pixelfed.social/nullspace)
 
 # Let's get down to business

@@ -8,8 +8,8 @@
 const MastodonBar = {
 
   config: {
-    instanceName: 'universeodon.com',
-    userName: 'null',
+    instanceName: 'mastodon.social',
+    userName: 'jasoncrevier',
     profileImg: '/assets/img/avatar.jpg',
     itemsToDisplay: 5,
   },
